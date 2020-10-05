@@ -36,28 +36,38 @@
       04 Oct 2020 3:16 PM
     </time>
   </span>
+<h2 id="background">Background</h2>
+<p>SlimeChan was my first real attempt at building a web application. I started it back in late 2019, but after running into some difficulties with it early on I took a long break before coming back this summer and getting it into its current (mostly finished) state. It should go without saying that I&rsquo;m not a fan of the culture that&rsquo;s ended up thriving on mainstream imageboards (namely 4chan), but I still like the anonymity and temporariness of everything on them, so I thought it would make a good first project.</p>
+<h2 id="technical">Technical</h2>
+<p>This was the first of my projects that I transferred to work with Nix after I switched from Ubuntu to NixOs this summer, and so for users with Nix the process of running the development version should be as easy as switching into a nix shell in the root of the directory, running the setup script, starting the database and starting the server.</p>
+<p>The server is written using Phoenix, a web framework for the Elixir language. I chose Elixir even though I had no plans to run this on any sort of distributed system because I&rsquo;m very fond of functional programming, and I wanted to get a handle on the language to write more complicated projects later. This was also my first project using a relational database, since by default Phoenix uses Postgre.</p>
+<p>The front end was originally going to be written in Elm, to incorporate yet another functional tool into the stack, but I found it difficult to work with and decided that I wanted to make the application work with or without javascript (though JS is still used for some quality of life features), and so I switched over to just using Phoenix&rsquo;s web templating language.</p>
+<p>The biggest technical challenges I faced on this project were the many-to-many association within a single table that I used for replies, handling user uploaded content (in this case images), and writing my own text parser to allow features like text formating and shortcodes for emojis.</p>
+<p>I also got the chance to work with elixir&rsquo;s task system a bit to automatically generate new boards using my own templates.</p>
+<h2 id="future-plans">Future Plans</h2>
+<p>As of now, the board is still missing 2 features that I&rsquo;d consider key, and 2 that while not essential are something I&rsquo;d quite like to have. 3 of these are listed in the <a href="https://github.com/an-nihil00/chan/blob/master/README.md">README</a>, of which only moderation and thread pruning are really essential. The last one is to transfer certain parameters to a config file of some sort, since as it is now several parameters that one might want to configure are hidden in the source, meaning if one wants to change them in a real deployment situation then the program will have to be recompiled. This is obviously not ideal, and even running th eprogram in interpreted mode, it makes it difficult to figure out where to configure everything.</p>
 
 </article>
 
-        </main><footer class="footer">
+        </main><footer>
   <hr/>
   <ul>
   
   <li>
     <a href="mailto:emm218@protonmail.com" class="footer-item">
-      <span class="icon"><i class='fa fa-envelope'></i></span> Email
+      <span class="icon"><i class='fa fa-envelope'></i></span>Email
     </a>
   </li>
   
   <li>
     <a href="https://github.com/an-nihil00" class="footer-item">
-      <span class="icon"><i class='fa fa-github'></i></span> GitHub
+      <span class="icon"><i class='fa fa-github'></i></span>GitHub
     </a>
   </li>
   
   <li>
     <a href="/gpg" class="footer-item">
-      <span class="icon"><i class='fa fa-key-modern'></i></span> GPG Key
+      <span class="icon"><i class='fa fa-key-modern'></i></span>GPG Key
     </a>
   </li>
   
