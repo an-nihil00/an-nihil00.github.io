@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://an-nihil00.github.io/posts/first-post/</loc>
+    <lastmod>2020-10-04T22:25:48-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://an-nihil00.github.io/posts/</loc>
+    <lastmod>2020-10-04T22:25:48-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://an-nihil00.github.io/gpg/</loc>
     <lastmod>2020-10-04T16:17:58-05:00</lastmod>
   </url>
