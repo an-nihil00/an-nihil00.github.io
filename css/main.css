@@ -1,9 +1,9 @@
 html {
     background-color:black;
     color:white;
-    font-family: "terminus", monospace;
+    font-family: "terminus (ttf)", monospace;
     font-size:14pt;
-    line-height:1.4;
+    line-height:1.3;
 }
 
 h1 {
