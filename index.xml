@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Monero Adress</title>
+      <link>http://an-nihil00.github.io/monero/</link>
+      <pubDate>Fri, 18 Dec 2020 14:46:59 -0500</pubDate>
+      
+      <guid>http://an-nihil00.github.io/monero/</guid>
+      <description>48Si4a8QGsgGkdLAnFRrx6BkvGVTitR66PgHMKvpEgmC5JBCqrAYfeS2URhGgdPACH5Z9q4Dk6XxJgBZng3fLVFQAZRHtiU</description>
+    </item>
+    
+    <item>
       <title>First Post</title>
       <link>http://an-nihil00.github.io/posts/first-post/</link>
       <pubDate>Sun, 04 Oct 2020 22:25:48 -0500</pubDate>
@@ -21,7 +30,7 @@
     </item>
     
     <item>
-      <title>GPG Key</title>
+      <title>PGP Key</title>
       <link>http://an-nihil00.github.io/gpg/</link>
       <pubDate>Sun, 04 Oct 2020 16:17:58 -0500</pubDate>
       
