@@ -17,6 +17,7 @@ h1, h2, h3 {
 }
 
 body {
+    background-color:black;
     width:50%;
     min-width:900px;
     margin:auto;
