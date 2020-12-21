@@ -6,10 +6,19 @@
     <description>Recent content in Posts on SLIME</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 Oct 2020 22:25:48 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 21 Dec 2020 04:48:07 -0500</lastBuildDate>
     
 	<atom:link href="http://an-nihil00.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Some Thoughts About an AI DM</title>
+      <link>http://an-nihil00.github.io/posts/aidm/</link>
+      <pubDate>Mon, 21 Dec 2020 04:48:07 -0500</pubDate>
+      
+      <guid>http://an-nihil00.github.io/posts/aidm/</guid>
+      <description>An idea for a new project has been eating at my mind recently (despite my inability to finish the myriad other ones I&amp;rsquo;ve started) so I thought I would try to commit some of my ideas and thoughts about the technical challenges to writing here.</description>
+    </item>
     
     <item>
       <title>First Post</title>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>Some Thoughts About an AI DM | SLIME</title>
+  <meta name="description" content="An idea for a new project has been eating at my mind recently (despite my inability to finish the myriad other ones I&rsquo;ve started) so I thought I would try to commit some of my ideas and thoughts about the technical challenges to writing here. ">
+  <link rel="canonical" href="http://an-nihil00.github.io/posts/aidm/" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+  <link href="https://use.fontawesome.com/releases/v5.0.2/css/fontawesome.css" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.2/css/brands.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/fonts.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="/css/main.css" type="text/css" charset="utf-8" />
+</head>
+<body><header role="banner">
+  <a href="/" title="home" class="logo">SLIME</a>
+</header>
+<hr>
+<nav class="navbar" role="navigation">
+  
+  <a href="/" class="navbar-item" role="link">home</a>
+  
+  <a href="/about" class="navbar-item" role="link">about</a>
+  
+  <a href="/posts" class="navbar-item" role="link">blog</a>
+  
+  <a href="/projects" class="navbar-item" role="link">projects</a>
+  
+</nav>
+<main>
+<article>
+  <header>
+  <h1>Some Thoughts About an AI DM</h1>
+  <span class="post-meta">
+    <span class="icon"><i class='fa fa-pencil'></i></span>
+    <time>
+      21 Dec 2020 4:48 AM
+    </time>
+  </span>
+  </header>
+  <p>An idea for a new project has been eating at my mind recently (despite my inability to finish the myriad other ones I&rsquo;ve started) so I thought I would try to commit some of my ideas and thoughts about the technical challenges to writing here.</p>
+<p>I was playing neverwinter nights and thinking about the general concept of computerized imitations of the experience of trpgs. NWN and the other d20 system computer rpgs are the most faithful ones I know of, and yet they still fail in certain ways. Because of their lack of any sort of true DM, the options that the player characters have are incredibly limited, and theres no possibility of the kind of quick improvisation of dialogue, locations, and encounters that for me forms a core aspect of the experience of sitting around a table playing a game with my friends. At the same time though, the aspect of design and strict control in these games makes them far more fun than games that are more open ended but rely heavily on procedural generation.</p>
+<p>The question that naturally occurred to me then was whether it would be possible to use machine learning in order to train an agent capable of generating an infinite amount of content that still had some feeling of design, like the improvisations of an experienced DM rather than the creations of a simple random generation algorithm. This was inspired by <a href="https://play.aidungeon.io">AI Dungeon</a>, though rather than what is in essence a specialized type of chat bot I want to create something which can create challenges within the framework of a trpg system, which I understand is a much more demanding task.</p>
+<p>This problem, it seems to me, can be divided into a few parts. Firstly, there is the matter of creating a system which can narrate events and decide to insert checks either on its own or due to a player&rsquo;s input. It must then also be able to continue the narrative differently based on the success or failure of those checks, which requires being able to recognize some semantic content in the text it&rsquo;s generating. Somewhat related to this is the problem of maintaining coherence with regard to the names and identities of characters, though one could argue that the lack of coherence in systems like AI dungeon (at least, in the earlier forms I was used to experimenting with, it may have changed now) was part of their unique charm. Secondly, there is the matter of generating environments. While I tend toward playing d&amp;d with no maps at all and relying only on loose spacial descriptions, part of the fun of playing a computerized version rather than the tabletop one is being able to see the world completely and precisely visualized.</p>
+<p>Either of these problems on their own already seems incredibly difficult, and so tackling both of them is almost certainly beyond my reach, but I am hoping that by thinking through the problem I might still be able to learn something useful. The first issue which occurs to me is the lack of suitable training data. While a system like AI dungeon, operating without the structure of any rpg rules, is able to be trained simply on text (which is incredibly abundant), there is no suitable existing dataset for where skill checks should be inserted into narratives, or what failure or success of those checks looks like. The best one might be able to do would be scraping such data from existing computer rpgs, but I&rsquo;m unsure of how feasible that would be, or whether such a data set would be large enough. There is also the matter of tying together the two components, making sure that objects in the narrative correspond to objects in the map and that objects in the map are understood to exist by the narrative system.</p>
+<p>Both of these problems seem like things that I can gain very little understanding of the severity and tractability of without actually having a system to test of course, so for now I&rsquo;ll leave off here and hopefully (when I feel a bit more functional) I&rsquo;ll be able to take a stab at mocking up an envrionment and a neural network architecture to operate within it so that I can actually test my ideas about solutions rather than simply navel gazing about what I think such a system might or might not do. Nobody will actually read these terribly vague ramblings, but to my imaginary audience I hope to see you again soon with progress on this project. &lt;3</p>
+
+</article>
+
+        </main><hr />
+<footer>
+  <ul>
+  
+  <li>
+    <a href="mailto:emm218@protonmail.com" class="footer-item">
+      <span class="icon"><i class='fa fa-envelope'></i></span>Email
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/an-nihil00" class="footer-item">
+      <span class="icon"><i class='fa fa-github'></i></span>GitHub
+    </a>
+  </li>
+  
+  <li>
+    <a href="/monero" class="footer-item">
+      <span class="icon"><i class='fab fa-monero'></i></span>Monero
+    </a>
+  </li>
+  
+  <li>
+    <a href="/gpg" class="footer-item">
+      <span class="icon"><i class='fa fa-key-modern'></i></span>PGP Key
+    </a>
+  </li>
+  
+  </ul>
+</footer>
+</body>
+</html>
