@@ -30,7 +30,7 @@ main {
     flex-grow:1;
 }
 
-a.logo {
+.logo {
     color:white;
     text-decoration: none;
     font-family: "arial", sans-serif;
