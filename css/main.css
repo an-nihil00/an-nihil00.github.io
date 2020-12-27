@@ -32,7 +32,7 @@ main {
 
 .logo {
     color:white;
-    text-decoration: none;
+    text-transform: uppercase;
     font-family: "arial", sans-serif;
     font-size:60pt;
     font-weight:700;
