@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Slime</title>
-    <link>xn--mp1a366c.xyz/posts/</link>
+    <link>https://xn--mp1a366c.xyz/posts/</link>
     <description>Recent content in Posts on Slime</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 04 Oct 2020 22:25:48 -0500</lastBuildDate>
     
-	<atom:link href="xn--mp1a366c.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://xn--mp1a366c.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>First Post</title>
-      <link>xn--mp1a366c.xyz/posts/first-post/</link>
+      <link>https://xn--mp1a366c.xyz/posts/first-post/</link>
       <pubDate>Sun, 04 Oct 2020 22:25:48 -0500</pubDate>
       
-      <guid>xn--mp1a366c.xyz/posts/first-post/</guid>
+      <guid>https://xn--mp1a366c.xyz/posts/first-post/</guid>
       <description>Today I got this site up and running using Hugo. I&amp;rsquo;m mainly hoping to use it as a place to write about my experiences working on my projects, and to put info about those projects.</description>
     </item>
     
