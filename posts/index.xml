@@ -6,10 +6,28 @@
     <description>Recent content in Posts on Slime</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Dec 2020 08:29:48 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 15 Jan 2021 01:14:02 -0500</lastBuildDate>
     
 	<atom:link href="https://xn--mp1a366c.xyz/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Building a Matrix Homeserver in Elixir Part 1</title>
+      <link>https://xn--mp1a366c.xyz/posts/matrix/</link>
+      <pubDate>Fri, 15 Jan 2021 01:14:02 -0500</pubDate>
+      
+      <guid>https://xn--mp1a366c.xyz/posts/matrix/</guid>
+      <description>Recently I decided to undertake another project in Elixir, and I wanted to work on something more difficult than SlimeChan, but still fairly managable. I eventually came to the idea of implementing a Matrix homeserver, as I&amp;rsquo;ve found Matrix very appealing since I learaned about it in 2019.</description>
+    </item>
+    
+    <item>
+      <title>A Reflection on Studying a Dead Language</title>
+      <link>https://xn--mp1a366c.xyz/posts/language/</link>
+      <pubDate>Tue, 29 Dec 2020 16:43:48 -0500</pubDate>
+      
+      <guid>https://xn--mp1a366c.xyz/posts/language/</guid>
+      <description>I spent a large part of my time in this semester of college studying Coptic, the language of Egypt before Arabization and last descendant of the heiroglyphic Egyptian that everyone knows about.</description>
+    </item>
     
     <item>
       <title>A Reflection on Studying a Dead Language</title>

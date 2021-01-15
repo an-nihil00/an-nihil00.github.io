@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8">
+  <title>Building a Matrix Homeserver in Elixir Part 1 | Slime</title>
+  <meta name="description" content="Recently I decided to undertake another project in Elixir, and I wanted to work on something more difficult than SlimeChan, but still fairly managable. I eventually came to the idea of implementing a Matrix homeserver, as I&rsquo;ve found Matrix very appealing since I learaned about it in 2019. ">
+  <link rel="canonical" href="https://xn--mp1a366c.xyz/posts/matrix/" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+  <link href="https://use.fontawesome.com/releases/v5.0.2/css/fontawesome.css" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.2/css/brands.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/fonts.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="/css/vars.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="/css/main.css" type="text/css" charset="utf-8" />
+</head>
+<body><header role="banner">
+  <span class="logo">Slime</a>
+</header>
+<hr>
+<nav class="navbar" role="navigation">
+  
+  <a href="/" class="navbar-item">home</a>
+  
+  <a href="/about" class="navbar-item">about</a>
+  
+  <a href="/posts" class="navbar-item">blog</a>
+  
+  <a href="/projects" class="navbar-item">projects</a>
+  
+</nav>
+<main>
+<article >
+  <header>
+  <h1>Building a Matrix Homeserver in Elixir Part 1</h1>
+  <span class="post-meta">
+    <span class="icon"><i class='fa fa-pencil' aria-label="Published"></i></span>
+    <time>
+      15 Jan 2021 1:14 AM
+    </time>
+  </span>
+  </header>
+  <p>Recently I decided to undertake another project in Elixir, and I wanted to work on something more difficult than <a href="%E9%BB%8F%E8%8F%8C.xyz/projects/slime-chan/">SlimeChan</a>, but still fairly managable. I eventually came to the idea of implementing a Matrix homeserver, as I&rsquo;ve found Matrix very appealing since I learaned about it in 2019. It aligns, in general, with my desire to get more of the web out of the hands of large corporations by providing a decentralized alternative to services like Discord, and I figured that Elixir would be a natural fit since similar applications (e.g. Discord) have been able to leverage the Erlang VM to achieve really amazing scalability. I decided to name the project Grex, after the term for a multicellular aggregate formed from cellular slime molds, much like the way that multiple homeservers come together in a decentralized network to form a larger community. I&rsquo;m still in the very early stages of the process of building it but I have already encountered some difficulties which I figured I would write about here. Ultimately these difficulties come from what I believe to be flaws in the spec, but as I&rsquo;m an extremely nervous person I can only hope that someone else gets these added in the future as I&rsquo;ll never be able to propose or even ask about them.</p>
+<p>Firstly, the interactive authentication API requires server side sessions, which is an unfortunate violation of RESTful design that (as far as I can see) makes it harder to leverage the distributed nature of Elixir applications. I&rsquo;ve only looked at the innards of Dendrite to confirm theres no clever workaround I&rsquo;m missing here, but it appears that the completed stages for a certain authentication session must be stored on the server. On the one hand this is, I suppose, good for security, as it prevents the possibility of a malicious client forging some record of them having completed stages, but it seems to me that one could design a protocol which would make this as hard as it is to fraudulently complete a stage in the current system. This seems to me to present an issue for a functional language like Elixir running over a distributed system, as ETS (the only way I can think of to store such sessions) is only accesible on the node that you write to it on. However, authentication requests should be comparatively infrequent, so my current idea for a solution is to keep all authentication on one node, though I&rsquo;m not expert in programming distributed systems in Elixir yet so I&rsquo;ll have to figure out what technical details I&rsquo;m missing (as I&rsquo;m certain there are many)</p>
+<p>Secondly, there seems to be no way to have multiple stage authentication for login, and even if there was a way to do that, there would be no way to do so on an account by account basis, preventing me from having a system where a user can enable two factor authentication on their account or not depending on what they want to do. Ultimately this isn&rsquo;t disastrous, but I think for a security focused protocol it should be an available feature and I&rsquo;m confused as to why it isn&rsquo;t.</p>
+<p>In spite of these difficulties, I&rsquo;m still planning to push forward with this project, and I&rsquo;ve even thought about trying to get some of my friends to contribute as well, since I think some experience working in a team would be valuable, and its entirely possible they will be able to see solutions where I can&rsquo;t. Also, I&rsquo;ve decided to use Plug and Cowboy directly for this, rather than using Phoenix, since I felt like the full framework might be a bit bulky and ill suited for this project. I&rsquo;m hoping this was the right decision but I may come to regret it in the future, we&rsquo;ll see.</p>
+
+</article>
+
+        </main><hr />
+<footer>
+  <ul>
+  
+  <li>
+    <a href="mailto:emm218@protonmail.com" class="footer-item">
+      <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>Email
+    </a>
+  </li>
+  
+  <li>
+    <a href="https://github.com/an-nihil00" class="footer-item">
+      <span class="icon"><i class="fa fa-github" aria-hidden="true"></i></span>GitHub
+    </a>
+  </li>
+  
+  <li>
+    <a href="/monero" class="footer-item">
+      <span class="icon"><i class="fab fa-monero" aria-hidden="true"></i></span>Monero
+    </a>
+  </li>
+  
+  <li>
+    <a href="/gpg" class="footer-item">
+      <span class="icon"><i class="fa fa-key-modern" aria-hidden="true"></i></span>PGP Key
+    </a>
+  </li>
+  
+  </ul>
+</footer>
+</body>
+</html>
